@@ -233,7 +233,7 @@ a {
   background-color: #000000;
 }
 
-.inner-page .container {
+.inner-page .main-navigation .container {
   display: flex;
   align-items: center;
 }
@@ -269,6 +269,10 @@ a {
   color: #aba9a7;
 }
 
+.catalog-wrapper {
+  display: flex;
+}
+
 .filter fieldset {
   border: none;
 }
@@ -295,10 +299,20 @@ a {
 }
 
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 700px;
+
   list-style: none;
 }
 
 .catalog-item {
+  width: 220px;
+  margin-bottom: 20px;
+
   background-color: #f8f8f8;
   box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
 }
