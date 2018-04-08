@@ -28,6 +28,24 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .index-page .main-header {
   margin-bottom: 75px;
 }
@@ -129,11 +147,35 @@ a {
 }
 
 .features h3 {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 70px;
+
   font-size: 30px;
   line-height: 42px;
 }
 
+.features h3::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  right: 135px;
+
+  width: 28px;
+  height: 28px;
+
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+
+.features-item p {
+  margin: 0;
+}
+
 .middle-colums {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   margin-bottom: 35px;
@@ -147,6 +189,20 @@ a {
   background-repeat: repeat;
 }
 
+.middle-colums::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+
+  width: 8px;
+  height: 278px;
+
+  background-image: url(..img/border.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  outline: 2px solid yellow;
+}
+
 .middle-colums h2 {
   font-size: 30px;
   line-height: 42px;
@@ -157,7 +213,22 @@ a {
 }
 
 .news-list {
+  margin: 0;
+  padding-left: 0;
+
   list-style: none;
+}
+
+.news-list li {
+  margin-bottom: 30px;
+}
+
+.news-item p {
+  margin: 0;
+}
+
+.news-item a {
+  color: #000000;
 }
 
 .news-item time {
@@ -174,6 +245,13 @@ a {
 }
 
 .button {
+  display: inline-block;
+  width: 140px;
+  vertical-align: middle;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+
   font: inherit;
 
   color: #ffffff;
