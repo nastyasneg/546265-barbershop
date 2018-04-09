@@ -260,24 +260,8 @@ input[type="radio"].visually-hidden {
   text-transform: none;
 }
 
-.gallery {
-  width: 300px;
-}
-
-.gallery-content {
-  display: block;
-  margin: 0;
-  margin-bottom: 40px;
-  width: 290px;
-  height: 164px;
-
-  background-color: #e5e5e5;
-  border: 5px solid #ffffff;
-}
-
 .button {
   display: inline-block;
-  min-width: 140px;
   vertical-align: middle;
   margin-right: 16px;
   padding: 10px 30px;
@@ -308,13 +292,51 @@ input[type="radio"].visually-hidden {
   background-color: #000000;
 }
 
+.gallery {
+  width: 300px;
+}
+
+.gallery-content {
+  display: block;
+  margin: 0;
+  margin-bottom: 40px;
+  width: 290px;
+  height: 164px;
+
+  background-color: #e5e5e5;
+  border: 5px solid #ffffff;
+}
+
+.gallery-container {
+  position: relative;
+
+  height: 260px;
+}
+
+.gallery-button {
+  position: absolute;
+  bottom: 0;
+
+  box-sizing: border-box;
+  width: 140px;
+  margin: 0;
+}
+
+.gallery-button-back {
+  left: 0;
+}
+
+.gallery-button-next {
+  right: 0;
+}
+
 .contacts {
   width: 380px;
 }
 
 .contacts p {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .appointment {
@@ -343,11 +365,10 @@ input[type="radio"].visually-hidden {
 
 .appointment-item input {
   width: 140px;
-  height: 43px;
   box-sizing: border-box;
-  margin-top: 10px;
+  margin: 0;
   margin-bottom: 10px;
-  padding: 15px;
+  padding: 8px 15px;
 
   font: inherit;
 
@@ -360,12 +381,18 @@ input[type="radio"].visually-hidden {
 }
 
 .appointment-item label {
-  margin-left: 18px;
+  display: block;
+
+  margin-left: 15px;
+  margin-bottom: 9px;
 }
 
 .appointment button {
-  flex-grow: 1;
+  display: block;
+  width: 100%;
+
   margin-top: 10px;
+  margin-right: 0px;
 }
 
 .main-footer {
@@ -627,29 +654,59 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social {
+  width: 145px;
+
   text-align: center;
 }
 
 .footer-social ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  width: 141px;
+  padding: 0;
+  margin: 0 auto;
 
   list-style: none;
 }
 
-.footer-social li {
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 43px;
   height: 43px;
 
   background-color: #000000;
 }
 
-.social-button {
-  color: #ffffff;
+.social-button:hover,
+.social-button:focus {
+  background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill: #000000;
+}
+
+.footer-social b {
+  display: block;
+  margin-bottom: 15px;
 }
 
 .footer-copyright {
   text-align: center;
+}
+
+.footer-copyright b {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-copyright .button {
+  display: block;
+  margin-right: 0;
 }
 
 .footer-copyright .button:focus,
