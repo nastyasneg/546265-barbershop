@@ -270,11 +270,47 @@ input[type="radio"].visually-hidden {
   width: 380px;
 }
 
+.contacts p {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.contacts a {
+  margin-right: 20px;
+}
+
 .appointment {
   width: 300px;
 }
 
+.appointment p {
+  margin: 0;
+}
+
+.appointment>p {
+  margin-bottom: 15px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.appointment-item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 140px;
+}
+
 .appointment-item input {
+  width: 140px;
+  height: 43px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+
   font: inherit;
 
   background-color: transparent;
@@ -283,6 +319,15 @@ input[type="radio"].visually-hidden {
 
 .appointment-item input:focus {
   border-color: #663d15;
+}
+
+.appointment-item label {
+  margin-left: 18px;
+}
+
+.appointment button {
+  flex-grow: 1;
+  margin-top: 10px;
 }
 
 .main-footer {
