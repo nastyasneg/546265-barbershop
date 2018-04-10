@@ -430,6 +430,10 @@ input[type="radio"].visually-hidden {
   background-color: #000000;
 }
 
+.inner-page .main-header-logo {
+  margin-right: 20px;
+}
+
 .inner-page .main-navigation .container {
   display: flex;
   align-items: center;
@@ -441,16 +445,71 @@ input[type="radio"].visually-hidden {
 }
 
 .inner-page .user-navigation {
+  margin: 0;
   margin-left: auto;
 }
 
+.site-navigation-current {
+  position: relative;
+}
+
+.site-navigation-current::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+
+  height: 4px;
+
+  background-color: #ffffff;
+}
+
 .page-title {
+  margin-left: 0;
+
   font-size: 30px;
   line-height: 42px;
 }
 
 .breadcrumb {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+
   list-style: none;
+}
+
+.breadcrumb li {
+  position: relative;
+
+  margin-right: 42px;
+}
+
+.breadcrumb li::after {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  right: -25px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.breadcrumb li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumb li:last-child::after {
+  display: none;
 }
 
 .breadcrumb a {
@@ -471,17 +530,73 @@ input[type="radio"].visually-hidden {
 }
 
 .filter fieldset {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+
   border: none;
 }
 
+.filter fieldset:first-child {
+  margin-bottom: 35px;
+}
+
 .filter legend {
+  margin: 0;
+  margin-bottom: 26px;
+
   font-size: 24px;
   line-height: 30px;
 }
 
 .filter ul {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
   line-height: 18px;
+}
+
+.filter-option {
+  margin-bottom: 19px;
+  padding-left: 45px;
+}
+
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -42px;
+
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid black;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: -38px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url(../img/cross.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .filter-input:focus + label,
@@ -493,6 +608,38 @@ input[type="radio"].visually-hidden {
   color: #000000;
 
   opacity: 0.5;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -42px;
+
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: -36px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.catalog {
+  margin-left: auto;
 }
 
 .catalog-list {
