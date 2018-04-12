@@ -1167,3 +1167,21 @@ input[type="radio"].visually-hidden {
 .login-form button {
   width: 100%;
 }
+
+.modal-map {
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  margin-top: -280px;
+  margin-left: -390px;
+
+  width: 766px;
+  height: 561px;
+
+  border: 7px solid #ffffff;
+}
+
+.modal-map p {
+  margin: 0;
+}
